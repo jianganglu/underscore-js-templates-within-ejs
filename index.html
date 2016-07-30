@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="zh-CN"> <![endif]-->
+<!--[if IE 7 ]>    <html class="on-js ie7" lang="zh-CN"> <![endif]-->
+<!--[if IE 8 ]>    <html class="on-js ie8" lang="zh-CN"> <![endif]-->
+<!--[if IE 9 ]>    <html class="on-js ie9" lang="zh-CN"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="zh-CN">
+<!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>underscore-js-template-within-ejs</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <script type="text/template" id="tmpl">
+      <ul>
+        <% _.each(data, function(item, index) { %>
+
+          <li><%= item.name %></li>
+          
+        <% }) %>
+      </ul>
+    </script>
+    <div id="tmpl-wrap"></div>
+
+    <script src="vendor/jquery.js"></script>
+    <script src="vendor/underscore.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
